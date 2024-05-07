@@ -1,0 +1,56 @@
+import json
+
+# JSON data
+x = {
+  "name": "ULASA SAKETH",
+  "email": "sakethraju00@gmail.com",
+  "location": "Hyderabad",
+  "skills": {
+    "Python": {
+      "description": "Proficient in Python programming language, including its syntax, data structures, and object-oriented principles. Capable of developing applications, scripts, and algorithms using Python for various purposes."
+    },
+    "NumPy": {
+      "description": "Skilled in data manipulation and numerical computing using the NumPy library in Python. Proficient in performing array operations, mathematical functions, and statistical analysis with NumPy."
+    },
+    "Pandas": {
+      "description": "Experienced in data manipulation, analysis, and exploration using the Pandas library in Python. Capable of working with structured data, time series, and performing data aggregation and transformation with Pandas."
+    },
+    "Probability and Statistics": {
+      "description": "Strong understanding of probability theory and statistical concepts such as hypothesis testing, regression analysis, and probability distributions. Proficient in applying statistical techniques to analyze data and make informed decisions."
+    },
+    "Calculus": {
+      "description": "Knowledgeable in calculus principles including differentiation, integration, and limits. Capable of applying calculus concepts in solving optimization and modeling problems."
+    },
+    "Linear Algebra": {
+      "description": "Familiar with linear algebra concepts such as matrices, vectors, eigenvalues, and eigenvectors. Proficient in using linear algebra techniques for data analysis, machine learning, and computer graphics."
+    },
+    "Generative AI": {
+      "description": "Familiar with generative AI techniques such as Generative Adversarial Networks (GANs) and Variational Autoencoders (VAEs). Proficient in implementing generative AI models for tasks such as image generation, text generation, and data synthesis."
+    }
+  },
+  "education": [
+    {
+      "institution": "Danalakshmi College of Engineering",
+      "location": "Tamil Nadu",
+      "degree": "Bachelor of Engineering in Computer Science and Engineering",
+      "year": "2019–2023"
+    }
+  ]
+}
+x["projects"] = [
+    {
+        "name": "Drug Recommendation System using Machine Learning",
+        "description": "Developed a machine learning-based system to recommend drugs during medical emergencies. Applied techniques such as supervised learning and data preprocessing to enhance accuracy and reliability.",
+        "year": "2023"
+    }
+]
+
+# Accessing
+print(x["name"])
+print(json.dumps(x["skills"]["NumPy"], indent=2))
+A = x["skills"]["NumPy"]["description"]
+print(A)
+print(x["education"][0]["location"])
+B= x["projects"][0]["name"]
+print(B)
+print(json.dumps(x["projects"][0], indent=2))
