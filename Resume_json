@@ -41,4 +41,6 @@ x = {
 # Accessing
 print(x["name"])
 print(json.dumps(x["skills"]["NumPy"], indent=2))
+N= x["skills"]["NumPy"]["description"]
+print(N)
 print(x["education"][0]["location"])
