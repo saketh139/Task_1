@@ -1,6 +1,6 @@
 import json
 
-# some JSON:
+#json data
 x = {
   "name": "ULASA SAKETH",
   "email": "sakethraju00@gmail.com",
@@ -38,9 +38,7 @@ x = {
   ]
 }
 
-
-# parse x:
-y = json.loads(x)
-
-# the result is a Python dictionary:
-print(y["name"])
+# Accessing
+print(x["name"])
+print(json.dumps(x["skills"]["NumPy"], indent=2))
+print(x["education"][0]["location"])
